@@ -1,0 +1,43 @@
+def check_numbers(number):
+    result = [int(digit) for digit in str(number)]
+    total = 0
+    for i in result:
+        total += i
+    print(total)
+    
+
+
+
+def check_maximum(x,y):
+    list1 = []
+    list2 = []
+
+    for i in range(int(x)+1,int(y)):
+        list1.append(i)
+        result3 = [int(digit) for digit in str(i)]
+        total3 = 0
+        for i in result3:
+            total3 += i
+        list2.append(total3)
+
+
+    max_value = max(list2)
+    max_index = list2.index(max_value)
+    print("The number with maximum value is ", list1[max_index])
+
+
+A = input("please enter a number: ")
+check_numbers(A)
+
+B = input("please enter another number that smaller than privious number: ")
+check_numbers(B)
+
+print("calculating...")
+
+check_maximum(A,B)
+
+
+    
+    
+    
+        
